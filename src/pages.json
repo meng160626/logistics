@@ -1,0 +1,61 @@
+{
+	"pages": [
+		{
+			"path": "pages/deliver/index",
+			"style": {
+				"navigationBarTitleText": "发货",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "运输订单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/shop/index",
+			"style": {
+				"navigationBarTitleText": "服务商城",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#530C00",
+		"backgroundColor": "#fff",
+		"list": [
+			{
+				"pagePath": "pages/deliver/index",
+				"text": "发货"
+			},
+			{
+				"pagePath": "pages/order/index",
+				"text": "运输订单"
+			},
+			{
+				"pagePath": "pages/shop/index",
+				"text": "服务商城"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "个人中心"
+			}
+		]
+	}
+}
