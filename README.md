@@ -24,7 +24,7 @@ vue create -p dcloudio/uni-preset-vue 'project name'
 ```
 npm install
 ```
-最外层文件夹添加文件`vue.config.js`
+[uView-ui推荐通过HBuilderX引入插件方式添加](https://www.uviewui.com/components/install.html)
 
 在`package.json`中添加配置
 
