@@ -2,9 +2,11 @@
   <view class="m-navigat">
     <view class="bg"></view>
     <view class="header" :class="hasBack ? 'hasBack' : ''">
-      <view class="white-bg" :style="{opacity: opacity}"></view>
-      <u-icon color="#fff" size="20" v-if="hasBack" name="arrow-left"></u-icon>
-      <text :style="{color: opacity === 0 ? '#fff' : '#000'}">文本{{opacity}}</text>
+      <view class="white-bg" :style="{opacity: opacityVal}"></view>
+      <view class="title" @click="onBackClick">
+        <u-icon :color="opacityVal === 0 ? '#fff' : '#000'" size="20" v-if="hasBack" name="arrow-left"></u-icon>
+        <text :style="{color: opacityVal === 0 ? '#fff' : '#000'}">{{title}}</text>
+      </view>
     </view>
   </view>
 </template>
@@ -13,11 +15,15 @@
 export default {
   name: "m-navigat",
   props: {
+    title: {
+      type: String,
+      required: true
+    },
     hasBack: {
       type: Boolean,
       default: true
     },
-    opacity: {
+    opacityVal: {
       type: Number,
       required: true
     }
@@ -26,7 +32,14 @@ export default {
     return {}
   },
   computed: {},
-  methods: {},
+  methods: {
+    /**
+     * 返回事件
+     */
+    onBackClick() {
+      uni.navigateBack();
+    }
+  },
   watch: {},
 
   // 组件周期函数--监听组件挂载完毕
@@ -54,7 +67,7 @@ body {
   .bg {
     width: 750upx;
     height: 440upx;
-    background: url('../../static/image/common/page-bg.png') no-repeat;
+    background: url('@/static/image/common/page-bg.png') no-repeat;
     background-size: cover;
     position: fixed;
     top: 0;
@@ -75,10 +88,10 @@ body {
     padding: 94upx 24upx 0 24upx;
     box-sizing: border-box;
     opacity: var(--opacity);
+    z-index: 9999;
 
     &.hasBack {
       justify-content:  flex-start;
-      gap: 10upx;
     }
     .white-bg {
       position: absolute;
@@ -88,6 +101,11 @@ body {
       height: 160upx;
       background-color: #fff;
       z-index: -1;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10upx;
     }
   }
 }
