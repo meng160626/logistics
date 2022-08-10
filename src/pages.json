@@ -29,6 +29,55 @@
 			}
 		}
 	],
+	"subPackages": [
+		{
+			"root": "deliver-pages",
+			"pages": [
+				{
+					"path": "create-source/index",
+					"style": {
+						"navigationBarTitleText": "个人中心",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "choose-company/index",
+					"style": {
+						"navigationBarTitleText": "选择承运商",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "allocate-company-goods/index",
+					"style": {
+						"navigationBarTitleText": "分配承运商货物",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "allocate-contend-goods/index",
+					"style": {
+						"navigationBarTitleText": "分配竞价货物",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "allocate-platform-goods/index",
+					"style": {
+						"navigationBarTitleText": "分配平台货物",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "create-contacts/index",
+					"style": {
+						"navigationBarTitleText": "新建联系人",
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
