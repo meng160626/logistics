@@ -74,6 +74,27 @@
 						"navigationBarTitleText": "新建联系人",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "create-goods/index",
+					"style": {
+						"navigationBarTitleText": "新建货品",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "select-goods/index",
+					"style": {
+						"navigationBarTitleText": "选择货品",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "fill-address/index",
+					"style": {
+						"navigationBarTitleText": "地址信息填写",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		}
