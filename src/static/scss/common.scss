@@ -13,10 +13,21 @@
     justify-content: center;
     align-items: center;
 }
+.fl-cl-between-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 .fl-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.fl-between-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .fl-start {
     display: flex;
@@ -49,4 +60,15 @@
 .in-mg-center {
     display: inline-block;
     margin: auto;
+}
+.car-no {
+    background: url('@/static/image/user/car-num-bg.png');
+    background-size: 100% 100%;
+    width: 150upx;
+    height: 44upx;
+    font-size: 26upx;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 44upx;
 }
