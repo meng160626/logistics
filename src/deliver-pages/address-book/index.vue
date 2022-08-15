@@ -24,19 +24,17 @@
       </u-tabs>
       <ipt-box></ipt-box>
       <addressInfo v-for="(item, index) in list" :key="index" :value="item"></addressInfo>
-      <view class="footer">
-        <text>找不到地址信息？</text>
-        <text class="new" @click="onCreateAddressBtnClick">点击这里新建发货地址</text>
-      </view>
     </view>
+    <footer-btn-box class="footer" :text="['新建发货地址']" @click-first-btn="onCreateAddressBtnClick"></footer-btn-box>
   </view>
 </template>
 
 <script>
+import footerBtnBox from '@/components/footer-btn-box/index.vue';
 import addressInfo from '@/components/custom-card/address-info/index.vue';
 export default {
   name: "address-book",
-  components: {addressInfo},
+  components: {addressInfo, footerBtnBox},
   props: {},
   data() {
     return {
@@ -54,7 +52,8 @@ export default {
           address: '九江石材',
           details: '河北省保定市易县九江石材(同兴东路南)',
           name: '张三',
-          phone: '19858945874'
+          phone: '19858945874',
+          isDefault: true
         }
       ],
     }
@@ -82,14 +81,10 @@ export default {
 .content {
   padding: 0 24upx;
   gap: 24upx;
-
-  .footer {
-    font-size: 28upx;
-    color: #999999;
-    text-align: center;
-  }
-  .new {
-    color: #FB6530;
-  }
+}
+.footer {
+  position: absolute;
+  bottom: 34upx;
+  left: 24upx;
 }
 </style>
