@@ -10,7 +10,8 @@
         <u-cell 
           title="货品" 
           :titleStyle="titleStyle"
-          :isLink="true">
+          :isLink="true"
+          @click="onSelectGoodsBtnClick">
           <view slot="value" class="value">
             <text>请选择货品</text>
           </view>
@@ -41,6 +42,16 @@ export default {
       titleStyle: {
         color: '#666'
       }
+    }
+  },
+  methods: {
+    /**
+     * 选择货品
+     */
+    onSelectGoodsBtnClick() {
+      uni.navigateTo({
+        url: '/deliver-pages/select-goods/index'
+      });
     }
   }
 }
