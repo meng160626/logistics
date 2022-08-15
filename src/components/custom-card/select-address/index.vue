@@ -12,7 +12,7 @@
           <text>{{signInfo.name ? signInfo.name : ''}}</text>
           <text>{{signInfo.phone ? formatPhone(signInfo.phone) : ''}}</text>
         </view>
-		    <view slot="right-icon" class="right-icon">
+		    <view slot="right-icon" class="right-icon" @click="onAddressBookBtnClick">
           <text>地址簿</text>
         </view>
       </u-cell>
@@ -27,7 +27,7 @@
           <text>{{pickInfo.name ? pickInfo.name : ''}}</text>
           <text>{{pickInfo.phone ? formatPhone(pickInfo.phone) : ''}}</text>
         </view>
-		    <view slot="right-icon" class="right-icon">
+		    <view slot="right-icon" class="right-icon" @click="onAddressBookBtnClick">
           <text>地址簿</text>
         </view>
       </u-cell>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { U } from 'caniuse-lite/data/browserVersions';
+
 export default {
   name: "select-address",
   data() {
@@ -48,6 +50,16 @@ export default {
       },
       pickInfo: {     // 收货信息
       },
+    }
+  },
+  methods: {
+    /**
+     * 跳转地址簿
+     */
+    onAddressBookBtnClick() {
+      uni.navigateTo({
+        url: '/deliver-pages/address-book/index'
+      });
     }
   }
 }
