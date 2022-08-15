@@ -58,11 +58,6 @@ export default {
 		return {
 		}
 	},
-	onLoad() {
-		uni.navigateTo({
-			url: '/deliver-pages/fill-address/index'
-		});
-	},
 	methods: {
 		/**
 		 * 创建货源
