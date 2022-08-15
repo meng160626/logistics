@@ -73,7 +73,7 @@ export default {
     }
   }
   .check-box {
-    padding: 40upx 30upx 44upx 30upx;
+    padding: 30upx 30upx 34upx 30upx;
   }
 }
 </style>
