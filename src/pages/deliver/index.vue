@@ -60,7 +60,7 @@ export default {
 	},
 	onLoad() {
 		uni.navigateTo({
-			url: '/deliver-pages/allocate-company-goods/index'
+			url: '/deliver-pages/fill-address/index'
 		});
 	},
 	methods: {
