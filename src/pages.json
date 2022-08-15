@@ -109,22 +109,31 @@
 		"color": "#999999",
 		"selectedColor": "#530C00",
 		"backgroundColor": "#fff",
+		"fontSize": "20px",
 		"list": [
 			{
 				"pagePath": "pages/deliver/index",
-				"text": "发货"
+				"text": "发货",
+				"iconPath": "static/image/toolbar/deliver.png",
+				"selectedIconPath": "static/image/toolbar/deliver-active.png"
 			},
 			{
 				"pagePath": "pages/order/index",
-				"text": "运输订单"
+				"text": "运输订单",
+				"iconPath": "static/image/toolbar/order.png",
+				"selectedIconPath": "static/image/toolbar/order-active.png"
 			},
 			{
 				"pagePath": "pages/shop/index",
-				"text": "服务商城"
+				"text": "服务商城",
+				"iconPath": "static/image/toolbar/shop.png",
+				"selectedIconPath": "static/image/toolbar/shop-active.png"
 			},
 			{
 				"pagePath": "pages/user/index",
-				"text": "个人中心"
+				"text": "个人中心",
+				"iconPath": "static/image/toolbar/user.png",
+				"selectedIconPath": "static/image/toolbar/user-active.png"
 			}
 		]
 	}
