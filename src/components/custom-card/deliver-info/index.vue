@@ -42,6 +42,9 @@
       <u-checkbox-group>
         <u-checkbox shape="circle" activeColor="#fb652e" label="保存到电话簿"></u-checkbox>
       </u-checkbox-group>
+      <u-checkbox-group>
+        <u-checkbox shape="circle" activeColor="#fb652e" label="保存到电话簿"></u-checkbox>
+      </u-checkbox-group>
     </view>
   </view>
 </template>
@@ -75,7 +78,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .value-box {
   position: absolute;
   left: 220upx;
@@ -88,5 +91,7 @@ export default {
 }
 .check-box {
   padding: 30upx 30upx 34upx 30upx;
+  display: flex;
+  gap: 36upx;
 }
 </style>
