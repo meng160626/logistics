@@ -2,7 +2,10 @@
   <view class="address-info card fl-cl">
     <view class="fl-between">
       <text>地点</text>
-      <text>{{value.address}}</text>
+      <text>
+        {{value.address}}
+        <text class="phone" v-if="value.isDefault">(默认地址)</text>
+      </text>
     </view>
     <view class="fl-between">
       <text>详细地址</text>
@@ -14,6 +17,13 @@
         <text>{{value.name}}</text>
         <text class="phone">{{formatPhone(value.phone)}}</text>
       </text>
+    </view>
+    <view class="check-box fl-between">
+      <u-checkbox-group>
+        <u-checkbox shape="circle" activeColor="#fb652e" label="设为默认地址"></u-checkbox>
+      </u-checkbox-group>
+      <view class="btn">编辑地址</view>
+      <view class="btn">选择地址</view>
     </view>
   </view>
 </template>
@@ -66,6 +76,25 @@ export default {
       margin-left: 0.5em;
       color: #FB6530;
     }
+  }
+  .btn {
+    text-align: center;
+    border-radius: 30upx;
+    font-size: 28upx;
+    color: #530C00;
+  }
+  .btn:nth-child(2) {
+    width: 182upx;
+    height: 56upx;
+    background: #FFFFFF;
+    border: 2upx solid #FECC2A;
+    line-height: 56upx;
+  }
+  .btn:nth-child(3) {
+    width: 186upx;
+    height: 60upx;
+    background: #FECC2A;
+    line-height: 60upx;
   }
 }
 </style>
