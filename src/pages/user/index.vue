@@ -85,6 +85,11 @@ export default {
 	},
 	methods: {
 
+	},
+	onLoad() {
+		// uni.navigateTo({
+		// 	url: '/deliver-pages/allocate-platform-goods/index'
+		// });
 	}
 }
 </script>

@@ -33,6 +33,9 @@
 <script>
 import footerBtnBox from '@/components/footer-btn-box/index.vue';
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "create-goods",
   components: {footerBtnBox},
   props: {},
@@ -50,25 +53,36 @@ export default {
 } 
 </script>
 
-<style scoped lang="scss">
-.content {
-  background-color: #FFF;
-  min-height: calc(100vh - 200upx);
+<style lang="scss">
+.create-goods {
+  .content {
+    background-color: #FFF;
+    min-height: calc(100vh - 200upx);
 
-  .ipt-box {
-    position: absolute;
-    left: 200upx;
-  }
-  .value-box {
-    font-size: 24rpx;
-    color: #c0c4cc;
-    position: absolute;
-    left: 200upx;
-  }
-  .footer {
-    position: absolute;
-    bottom: 36upx;
-    left: 24upx;
+    .ipt-box {
+      position: absolute;
+      left: 200upx;
+    }
+    .value-box {
+      font-size: 24rpx;
+      color: #c0c4cc;
+      position: absolute;
+      left: 200upx;
+    }
+    .footer {
+      position: absolute;
+      bottom: 36upx;
+      left: 24upx;
+    }
+    
+    .u-cell-group {
+      padding: 0 36upx 24upx 36upx;
+      .u-cell {
+        .u-cell__body {
+          padding: 10px 0;
+        }
+      }
+    }
   }
 }
 </style>

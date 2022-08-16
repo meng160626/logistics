@@ -36,6 +36,9 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "goods-info",
   data() {
     return {
@@ -57,10 +60,9 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .goods-info {
   .box {
-    padding: 0 30upx 12upx 30upx;
     .value {
       color: #999999;
       position: absolute;
@@ -73,6 +75,14 @@ export default {
         font-size: 28upx;
         font-weight: 500;
         color: #FB6530;
+      }
+    }
+  }
+  .u-cell-group {
+    padding: 0 36upx 24upx 36upx;
+    .u-cell {
+      .u-cell__body {
+        padding: 10px 0;
       }
     }
   }

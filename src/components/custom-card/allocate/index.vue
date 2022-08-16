@@ -59,6 +59,9 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "allocate",
   comments: {},
   props: {
@@ -87,14 +90,13 @@ export default {
  
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .allocate {
   .icon {
     width: 30upx;
     height: 33upx;
   }
   .cell {
-    padding: 0 30upx 24upx 30upx;
 
     .ipt-box {
       position: absolute;
@@ -114,6 +116,14 @@ export default {
         font-size: 28upx;
         font-weight: 500;
         color: #FB6530;
+    }
+    .u-cell-group {
+      padding: 0 36upx 24upx 36upx;
+      .u-cell {
+        .u-cell__body {
+          padding: 10px 0;
+        }
+      }
     }
   }
 }

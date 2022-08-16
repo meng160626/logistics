@@ -19,6 +19,9 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "fund",
   props: {
     fund: {
@@ -43,21 +46,31 @@ export default {
  
 </script>
 
-<style scoped lang="scss">
-.value {
-  gap: 8upx;
-  font-size: 26upx;
+<style lang="scss">
+.fund {
+  .value {
+    gap: 8upx;
+    font-size: 26upx;
 
-  .done {
-    color: #6CE0B3;
+    .done {
+      color: #6CE0B3;
+    }
+    .undone {
+      color: #FF605C;
+    }
+    .money {
+      color: #FB6530;
+      font-size: 28upx;
+      font-weight: bold;
+    }
   }
-  .undone {
-    color: #FF605C;
-  }
-  .money {
-    color: #FB6530;
-    font-size: 28upx;
-    font-weight: bold;
+  .u-cell-group {
+      padding: 5px 12px;
+    .u-cell {
+      .u-cell__body {
+        padding: 3px 0;
+      }
+    }
   }
 }
 </style>

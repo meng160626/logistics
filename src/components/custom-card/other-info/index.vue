@@ -47,6 +47,9 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "other-info",
   data() {
     return {
@@ -58,10 +61,9 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .other-info {
   .box {
-    padding: 0 30upx 12upx 30upx;
 
     .right-icon {
       gap: 12upx;
@@ -73,6 +75,14 @@ export default {
       position: absolute;
       left: 180upx;
       color: #999999;
+    }
+  }
+  .u-cell-group {
+    padding: 0 36upx 24upx 36upx;
+    .u-cell {
+      .u-cell__body {
+        padding: 10px 0;
+      }
     }
   }
 }

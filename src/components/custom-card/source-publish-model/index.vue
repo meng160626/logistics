@@ -52,6 +52,9 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "source-publish-model",
   data() {
     return {
@@ -66,10 +69,17 @@ export default {
 <style lang="scss">
 .source-publish-model {
   .box {
-    padding: 0 30upx 12upx 30upx;
     .value {
       position: relative;
       left: -60upx;
+    }
+    .u-cell-group {
+      padding: 0 36upx;
+      .u-cell {
+        .u-cell__body {
+          padding: 10px 0;
+        }
+      }
     }
   }
   .check-box {

@@ -20,6 +20,9 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared'
+  },
   name: "payment",
   props: {
     payment: {
@@ -36,8 +39,18 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.phone {
-  color: #FB6530;
+<style lang="scss">
+.payment {
+  .phone {
+    color: #FB6530;
+  }
+  .u-cell-group {
+    padding: 0 36upx 24upx 36upx;
+    .u-cell {
+      .u-cell__body {
+        padding: 3px 0;
+      }
+    }
+  }
 }
 </style>
