@@ -32,7 +32,7 @@
       <view class="bill-content">
         <card-title text="待收款项" url="bill-icon.png" :no-padding="true">
           <view class="type-btn fl-center" @click="show = true">
-            <text>全部</text>
+            <text>{{columns[0][type]}}</text>
             <u-icon color="#999999" name="arrow-down"></u-icon>
           </view>
         </card-title>
@@ -41,7 +41,7 @@
           <view class="fl-cl list-content">
             <fund 
               class="fund" 
-              v-for="(item, index) in list" 
+              v-for="(item, index) in showList" 
               :key="index" 
               :fund="item">
             </fund>
@@ -50,7 +50,13 @@
       </view>
     </view>
 
-    <u-picker :show="show" :columns="columns"></u-picker>
+    <u-picker 
+      :show="show" 
+      :columns="columns" 
+      :defaultIndex="defaultIndex" 
+      @cancel="show = false"
+      @confirm="onConfirm">
+    </u-picker>
   </view>
 </template>
 
@@ -94,11 +100,27 @@ export default {
           money: 6720.93
         }
       ],
+      showList: [],
       show: false,
-      columns: ['全部', '待收款', '已收款'],
+      columns: [['全部', '待收款', '已收款']],
+      defaultIndex: [0],
+      type: 0
     }
   },
-  methods: {}
+  methods: {
+    /**
+     * 分类弹窗确定
+     */
+    onConfirm(array) {
+      this.defaultIndex = array.indexs;
+      this.type = array.indexs[0];
+      this.showList = this.type === 0 ? this.list : this.type === 1 ? this.list.filter(item => !item.isDone) : this.list.filter(item => item.isDone);
+      this.show = false;
+    },
+  },
+  onLoad() {
+    this.showList = this.list;
+  }
 } 
 </script>
 
