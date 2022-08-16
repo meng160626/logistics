@@ -121,6 +121,13 @@
 						"navigationBarTitleText": "款项明细",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "member/index",
+					"style": {
+						"navigationBarTitleText": "会员",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		}
