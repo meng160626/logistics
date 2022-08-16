@@ -114,6 +114,13 @@
 						"navigationBarTitleText": "钱包",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "fund-details/index",
+					"style": {
+						"navigationBarTitleText": "款项明细",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		}
