@@ -41,7 +41,7 @@
 							<image style="width: 33upx;height: 29upx;" src="@/static/image/user/member-icon.png" slot="icon" />
 							<image style="width: 150upx;height: 36upx;" src="@/static/image/user/member-name.png" slot="value" />
 						</u-cell>
-						<u-cell title="我的收益" :border="false" :isLink="true">
+						<u-cell title="我的收益" :border="false" :isLink="true" @click="onPackageBtnClick">
 							<image style="width: 31upx;height: 31upx;" src="@/static/image/user/line-icon.png" slot="icon" />
 							<view slot="value" class="value-box fl-center">
 								<text>有新收益啦！</text>
@@ -84,12 +84,14 @@ export default {
 		}
 	},
 	methods: {
-
-	},
-	onLoad() {
-		// uni.navigateTo({
-		// 	url: '/deliver-pages/allocate-platform-goods/index'
-		// });
+		/**
+		 * 跳转钱包
+		 */
+		onPackageBtnClick() {
+			uni.navigateTo({
+				url: '/user-pages/packages/index'
+			});
+		}
 	}
 }
 </script>
