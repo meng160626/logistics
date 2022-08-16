@@ -1,6 +1,6 @@
 <template>
 	<view class="user">
-		<m-navigat title="我的" :opacityVal="opacity" :hasBack="false"></m-navigat>
+		<m-navigat title="我的" :opacity="opac" :hasBack="false"></m-navigat>
 
 		<view class="contet fl-cl">
 			<!-- 用户信息 -->

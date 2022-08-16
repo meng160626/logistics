@@ -1,6 +1,6 @@
 <template>
   <view class="choose-company">
-    <m-navigat title="选择承运商" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="选择承运商" :opacity="opac"></m-navigat>
     <view class="content">
       <u-cell-group :border="false">
         <u-cell v-for="(item, index) in list" :key="index" :title="item">

@@ -4,10 +4,10 @@
       <view class="bg"></view>
     </slot>
     <view class="header" :class="hasBack ? 'hasBack' : ''">
-      <view class="white-bg" :style="{opacity: opacityVal}"></view>
+      <view class="white-bg" :style="{opacity: opacity}"></view>
       <view class="title" @click="onBackClick">
-        <u-icon :color="isBlack ? '#333' : opacityVal === 0 ? '#fff' : '#333'" size="20" v-if="hasBack" name="arrow-left"></u-icon>
-        <text :style="{color: isBlack ? '#333' : opacityVal === 0 ? '#fff' : '#333'}">{{title}}</text>
+        <u-icon :color="isBlack ? '#333' : opacity === 0 ? '#fff' : '#333'" size="20" v-if="hasBack" name="arrow-left"></u-icon>
+        <text :style="{color: isBlack ? '#333' : opacity === 0 ? '#fff' : '#333'}">{{title}}</text>
       </view>
     </view>
   </view>
@@ -25,7 +25,7 @@ export default {
       type: Boolean,
       default: true
     },
-    opacityVal: {
+    opacity: {
       type: Number,
       required: true
     },

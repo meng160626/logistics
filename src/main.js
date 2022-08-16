@@ -9,7 +9,7 @@ Vue.config.productionTip = false;
 Vue.mixin({
   data: () => {
     return {
-      opacity: 0
+      opac: 0
     };
   },
   methods: {
@@ -17,9 +17,9 @@ Vue.mixin({
   },
   onPageScroll: function (e) {
     if (e.scrollTop < 100) {
-      this.opacity = Math.floor(e.scrollTop / 2) / 100;
+      this.opac = Math.floor(e.scrollTop / 2) / 100;
     } else {
-      this.opacity = 1;
+      this.opac = 1;
     }
   },
 });

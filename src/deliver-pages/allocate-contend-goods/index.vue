@@ -1,6 +1,6 @@
 <template>
   <view class="allocate-contend-goods">
-    <m-navigat title="分配竞价货物" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="分配竞价货物" :opacity="opac"></m-navigat>
 
     <view class="content">
       <card-title 

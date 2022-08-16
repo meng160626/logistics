@@ -1,6 +1,6 @@
 <template>
   <view class="allocate-company-goods">
-    <m-navigat title="分配承运商货物" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="分配承运商货物" :opacity="opac"></m-navigat>
 
     <view class="list fl-cl">
       <allocate 

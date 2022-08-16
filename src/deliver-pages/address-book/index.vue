@@ -1,6 +1,6 @@
 <template>
   <view class="address-book">
-    <m-navigat title="地址簿" opacityVal="opacity"></m-navigat>
+    <m-navigat title="地址簿" opacity="opac"></m-navigat>
     
     <view class="content fl-cl">
       <u-tabs

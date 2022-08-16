@@ -1,6 +1,6 @@
 <template>
   <view class="fill-address">
-    <m-navigat title="地址信息填写" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="地址信息填写" :opacity="opac"></m-navigat>
 
     <map></map>
     <view class="content fl-cl">

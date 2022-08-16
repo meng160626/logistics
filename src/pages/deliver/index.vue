@@ -1,6 +1,6 @@
 <template>
 	<view class="content fl-cl">
-        <m-navigat :hasBack="false" :opacityVal="opacity" title="发货"></m-navigat>
+        <m-navigat :hasBack="false" :opacity="opac" title="发货"></m-navigat>
 		
 		<!-- 标语 -->
 		<view class="slogan fl-cl-center-start">

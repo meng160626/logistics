@@ -1,6 +1,6 @@
 <template>
   <view class="create-goods">
-    <m-navigat title="新建货品" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="新建货品" :opacity="opac"></m-navigat>
     <view class="content">
       <u-cell-group :border="false">
         <u-cell title="货品名称">

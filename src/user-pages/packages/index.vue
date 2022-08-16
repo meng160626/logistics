@@ -31,7 +31,7 @@
 
       <view class="bill-content">
         <card-title text="待收款项" url="bill-icon.png" :no-padding="true">
-          <view class="type-btn fl-center">
+          <view class="type-btn fl-center" @click="show = true">
             <text>全部</text>
             <u-icon color="#999999" name="arrow-down"></u-icon>
           </view>
@@ -49,6 +49,8 @@
         </scroll-view>
       </view>
     </view>
+
+    <u-picker :show="show" :columns="columns"></u-picker>
   </view>
 </template>
 
@@ -80,8 +82,20 @@ export default {
           isDone: true,
           id: 'YSDD202207040928280004',
           money: 8870.1
+        },
+        {
+          isDone: false,
+          id: 'YSDD202207040928280005',
+          money: 5000.22
+        },
+        {
+          isDone: true,
+          id: 'YSDD202207040928280006',
+          money: 6720.93
         }
-      ]
+      ],
+      show: false,
+      columns: ['全部', '待收款', '已收款'],
     }
   },
   methods: {}

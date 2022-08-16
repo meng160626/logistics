@@ -1,6 +1,6 @@
 <template>
   <view class="select-goods">
-    <m-navigat title="选择货品" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="选择货品" :opacity="opac"></m-navigat>
 
     <view class="content fl-cl">
       <ipt-box @change="change"></ipt-box>

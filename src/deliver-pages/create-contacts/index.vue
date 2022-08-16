@@ -1,6 +1,6 @@
 <template>
   <view class="create-contacts">
-    <m-navigat title="新建联系人" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="新建联系人" :opacity="opac"></m-navigat>
 
     <view class="content">
       <u-cell-group :border="false">

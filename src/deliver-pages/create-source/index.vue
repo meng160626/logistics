@@ -1,6 +1,6 @@
 <template>
   <view class="create-source fl-cl">
-    <m-navigat title="创建货源" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="创建货源" :opacity="opac"></m-navigat>
 
     <!-- 收发货信息 -->
     <select-address>

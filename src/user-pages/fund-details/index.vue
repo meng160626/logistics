@@ -1,6 +1,6 @@
 <template>
   <view class="fund-details">
-    <m-navigat title="款项明细" :opacityVal="opacity"></m-navigat>
+    <m-navigat title="款项明细" :opacity="opac"></m-navigat>
     
     <view class="content fl-cl">
       <payment :payment="payment"></payment>
