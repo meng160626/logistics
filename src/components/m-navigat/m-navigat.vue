@@ -1,11 +1,13 @@
 <template>
   <view class="m-navigat">
-    <view class="bg"></view>
+    <slot name="bg">
+      <view class="bg"></view>
+    </slot>
     <view class="header" :class="hasBack ? 'hasBack' : ''">
       <view class="white-bg" :style="{opacity: opacityVal}"></view>
       <view class="title" @click="onBackClick">
-        <u-icon :color="opacityVal === 0 ? '#fff' : '#000'" size="20" v-if="hasBack" name="arrow-left"></u-icon>
-        <text :style="{color: opacityVal === 0 ? '#fff' : '#000'}">{{title}}</text>
+        <u-icon :color="isBlack ? '#333' : opacityVal === 0 ? '#fff' : '#333'" size="20" v-if="hasBack" name="arrow-left"></u-icon>
+        <text :style="{color: isBlack ? '#333' : opacityVal === 0 ? '#fff' : '#333'}">{{title}}</text>
       </view>
     </view>
   </view>
@@ -26,6 +28,10 @@ export default {
     opacityVal: {
       type: Number,
       required: true
+    },
+    isBlack: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -84,7 +90,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 36upx;
-    color: #000;
+    color: #333;
     padding: 94upx 24upx 0 24upx;
     box-sizing: border-box;
     opacity: var(--opacity);
