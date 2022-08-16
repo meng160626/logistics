@@ -1,5 +1,5 @@
 <template>
-  <view class="fund card">
+  <view class="fund card" @click="onFundDetailsBtnClick">
     <u-cell-group :border="false">
       <u-cell :titleStyle="{color: '#999', fontSize: '28upx'}" :border="false" title="运输订单运费">
         <view slot="value" class="fl-center value">
@@ -29,7 +29,16 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  methods: {
+    /**
+     * 跳转款项明细
+     */
+    onFundDetailsBtnClick() {
+      uni.navigateTo({
+        url: '/user-pages/fund-details/index'
+      });
+    }
+  }
 }
  
 </script>
