@@ -37,7 +37,7 @@
 
 				<view>
 					<u-cell-group :border="false">
-						<u-cell title="会员" :border="false" :isLink="true">
+						<u-cell title="会员" :border="false" :isLink="true" @click="onMemberBtnClick">
 							<image style="width: 33upx;height: 29upx;" src="@/static/image/user/member-icon.png" slot="icon" />
 							<image style="width: 150upx;height: 36upx;" src="@/static/image/user/member-name.png" slot="value" />
 						</u-cell>
@@ -90,6 +90,14 @@ export default {
 		onPackageBtnClick() {
 			uni.navigateTo({
 				url: '/user-pages/packages/index'
+			});
+		},
+		/**
+		 * 跳转会员
+		 */
+		onMemberBtnClick() {
+			uni.navigateTo({
+				url: '/user-pages/member/index'
 			});
 		}
 	}
