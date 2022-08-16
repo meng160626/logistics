@@ -1,5 +1,5 @@
 <template>
-  <view class="card-title fl-between">
+  <view class="card-title fl-between" :class="noPadding ? 'no-padding' : ''">
     <view class="left fl-start">
       <image 
         v-if="url"
@@ -28,6 +28,10 @@ export default {
     height: {
       type: Number,
       default: 32
+    },
+    noPadding: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -42,6 +46,9 @@ export default {
   width: 100%;
   box-sizing: border-box;
 
+  &.no-padding {
+    padding: 30upx 0 24upx 0;
+  }
   .left {
     gap: 12upx;
   }
