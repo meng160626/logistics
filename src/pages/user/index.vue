@@ -1,12 +1,12 @@
 <template>
 	<view class="user">
-		<m-navigat :title="login ? '我的' : '我的(未登录)'" :opacity="opac" :hasBack="false"></m-navigat>
+		<m-navigat :title="hasLogin ? '我的' : '我的(未登录)'" :opacity="opac" :hasBack="false"></m-navigat>
 
 		<view class="contet fl-cl">
 			<!-- 用户信息 -->
 			<view class="info fl-start">
-				<image class="head" :src="getUrl(login ? '/user/user-head.png' : '/user/user-head-unlogin.png')" />
-				<view class="fl-cl-between-start" v-if="login">
+				<image class="head" :src="getUrl(hasLogin ? '/user/user-head.png' : '/user/user-head-unlogin.png')" />
+				<view class="fl-cl-between-start" v-if="hasLogin">
 					<view class="fl-center">
 						<text>王富贵</text>
 						<image class="vip" :src="getUrl('/user/member-name.png')" />
@@ -19,22 +19,22 @@
 			<view class="package">
 				<view class="data fl-between-start">
 					<view class="fl-cl-center">
-						<text v-if="login"><text class="num">269</text>公里</text>
+						<text v-if="hasLogin"><text class="num">269</text>公里</text>
 						<text v-else>-</text>
 						<text>今日里程</text>
 					</view>
 					<view class="fl-cl-center">
-						<text v-if="login"><text class="num">4269</text>公里</text>
+						<text v-if="hasLogin"><text class="num">4269</text>公里</text>
 						<text v-else>-</text>
 						<text>总里程</text>
 					</view>
 					<view class="fl-cl-center">
-						<text v-if="login"><text class="num">2377</text></text>
+						<text v-if="hasLogin"><text class="num">2377</text></text>
 						<text v-else>-</text>
 						<text>里程积分</text>
 					</view>
 					<view class="fl-cl-center">
-						<text v-if="login"><text class="num">3</text>张</text>
+						<text v-if="hasLogin"><text class="num">3</text>张</text>
 						<text v-else>-</text>
 						<text>优惠券</text>
 					</view>
@@ -44,11 +44,11 @@
 					<u-cell-group :border="false">
 						<u-cell title="会员" :border="false" :isLink="true" @click="onMemberBtnClick">
 							<image style="width: 33upx;height: 29upx;" :src="getUrl('/user/member-icon.png')" slot="icon" />
-							<image v-if="login" style="width: 150upx;height: 36upx;" :src="getUrl('/user/member-name.png')" slot="value" />
+							<image v-if="hasLogin" style="width: 150upx;height: 36upx;" :src="getUrl('/user/member-name.png')" slot="value" />
 						</u-cell>
 						<u-cell title="我的收益" :border="false" :isLink="true" @click="onPackageBtnClick">
 							<image style="width: 31upx;height: 31upx;" :src="getUrl('/user/line-icon.png')" slot="icon" />
-							<view v-if="login" slot="value" class="value-box fl-center">
+							<view v-if="hasLogin" slot="value" class="value-box fl-center">
 								<text>有新收益啦！</text>
 								<view class="temp"></view>
 							</view>
@@ -85,8 +85,11 @@
 <script>
 export default {
 	data() {
-		return {
-			login: false
+		return {}
+	},
+	computed: {
+		hasLogin() {
+			return this.$store.state.hasLogin;
 		}
 	},
 	methods: {

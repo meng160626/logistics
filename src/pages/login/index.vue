@@ -66,24 +66,12 @@ export default {
       requestPost({
         url: '/users/login',
         success: (res) => {
-          console.log(res);
+          if (res.data) {
+            this.$store.commit('login');
+            uni.navigateBack();
+          }
         }
       });
-      // this.$store
-      //   .dispatch("getUserOpenId")
-      //   .then((res) => {
-      //     setTimeout(() => {
-      //       uni.hideLoading();
-      //       uni.navigateBack();
-      //     }, 1000);
-      //   })
-      //   .catch((err) => {
-      //     uni.hideLoading();
-      //     this.$refs.uToast.show({
-      //       title: "登录失败,请重试",
-      //       type: "error",
-      //     });
-      //   });
     },
   }
 };
