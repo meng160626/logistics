@@ -14,15 +14,15 @@
 		<!-- 货源链接 -->
 		<view class="card btn-box fl-between">
 			<view class="btn fl-cl-center" v-on:click="onCreateSourceBtnClick">
-				<image src="@/static/image/deliver/create-goods-icon.png" />
+				<image :src="getUrl('/deliver/create-goods-icon.png')" />
 				<text>创建货源</text>
 			</view>
 			<view class="btn fl-cl-center">
-				<image src="@/static/image/deliver/often-goods-icon.png" />
+				<image :src="getUrl('/deliver/often-goods-icon.png')" />
 				<text>常发货源</text>
 			</view>
 			<view class="btn fl-cl-center">
-				<image src="@/static/image/deliver/done-goods-icon.png" />
+				<image :src="getUrl('/deliver/done-goods-icon.png')" />
 				<text>已发布货源</text>
 			</view>
 		</view>
@@ -33,7 +33,7 @@
 				<view class="fl-between-end title">
 					<text>货运无忧险 | 全国范围可保</text>
 					<view>
-						<image src="@/static/image/common/money-icon.png" />
+						<image :src="getUrl('/common/money-icon.png')" />
 						<text>13.5</text>
 						<text>起</text>
 					</view>

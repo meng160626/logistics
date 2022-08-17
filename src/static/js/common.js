@@ -1,3 +1,5 @@
+import config from './config.js';
+
 /**
  * 格式化手机号
  * @param {String / Number} phone 
@@ -31,7 +33,16 @@ const formatMoney = function(money) {
     return arr.join('') + '.' + r;
 }
 
+/**
+ * 获取图片网络地址
+ * @param {String} url 
+ */
+const getUrl = function(url) {
+  return config.prevUrl + url;
+}
+
 export default {
     formatPhone,
-    formatMoney
+    formatMoney,
+    getUrl
 }

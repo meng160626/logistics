@@ -5,18 +5,18 @@
     <view class="contet fl-cl">
       <!-- 用户信息 -->
       <view class="info fl-start">
-        <image class="head" src="@/static/image/user/user-head.png" />
+        <image class="head" :src="getUrl('/user/user-head.png')" />
         <view class="fl-cl-center-start">
           <view class="fl-center">
             <text>王富贵</text>
-            <image class="vip" src="@/static/image/user/member-name.png" />
+            <image class="vip" :src="getUrl('/user/member-name.png')" />
           </view>
           <text class="save">累计已省874元</text>
         </view>
       </view>
 
       <view class="growth card">
-        <card-title text="我的成长" url="growth-icon.png" :width="24" :height="35"></card-title>
+        <card-title text="我的成长" url="growth-icon.png')" :width="24" :height="35"></card-title>
 
         <view class="line-box">
           <u-line-progress :height="10" :showText="false" inactiveColor="#fef4d4" :percentage="57">
@@ -32,12 +32,12 @@
           <view class="today">
             <text>今日获得：</text>
             <text style="color: #333;">80</text>
-            <image src="@/user-pages/static/image/member/question-icon.png" @click="show = true"></image>
+            <image :src="getUrl('/user-pages/member/question-icon.png')" @click="show = true"></image>
           </view>
           <view class="fl-center total">
             <text style="color: #333;">2868</text>
             <text>/5000</text>
-            <image src="@/user-pages/static/image/member/wldr-icon.png" class="vip ml-3"></image>
+            <image :src="getUrl('/user-pages/member/wldr-icon.png')" class="vip ml-3"></image>
           </view>
         </view>
       </view>
@@ -45,20 +45,20 @@
       <!-- 我的权益 -->
       <view class="rights card">
         <view class="title fl-center">
-          <image src="@/user-pages/static/image/member/right-icon.png"></image>
+          <image :src="getUrl('/user-pages/member/right-icon.png')"></image>
           <text>我的权益</text>
         </view>
         <view class="right-box">
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/tx-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/tx-icon.png')"></image>
             <text>通行费<text class="gold">9.8折</text></text>
           </view>
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/jy-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/jy-icon.png')"></image>
             <text>加油<text class="gold">9.8折</text></text>
           </view>
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/zs-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/zs-icon.png')"></image>
             <text>住宿<text class="gold">9.8折</text></text>
           </view>
         </view>
@@ -68,28 +68,28 @@
         </view>
         <view class="right-box lock">
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/tx-icon.png"></image>
-            <image class="lock" src="@/user-pages/static/image/member/lock-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/tx-icon.png')"></image>
+            <image class="lock" :src="getUrl('/user-pages/member/lock-icon.png')"></image>
             <text>通行费<text class="gold">9.5折</text></text>
           </view>
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/jy-icon.png"></image>
-            <image class="lock" src="@/user-pages/static/image/member/lock-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/jy-icon.png')"></image>
+            <image class="lock" :src="getUrl('/user-pages/member/lock-icon.png')"></image>
             <text>加油<text class="gold">9.5折</text></text>
           </view>
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/zs-icon.png"></image>
-            <image class="lock" src="@/user-pages/static/image/member/lock-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/zs-icon.png')"></image>
+            <image class="lock" :src="getUrl('/user-pages/member/lock-icon.png')"></image>
             <text>住宿<text class="gold">9.5折</text></text>
           </view>
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/tx-icon.png"></image>
-            <image class="lock" src="@/user-pages/static/image/member/lock-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/tx-icon.png')"></image>
+            <image class="lock" :src="getUrl('/user-pages/member/lock-icon.png')"></image>
             <text>全天候通行</text>
           </view>
           <view class="fl-cl-center">
-            <image src="@/user-pages/static/image/member/cy-icon.png"></image>
-            <image class="lock" src="@/user-pages/static/image/member/lock-icon.png"></image>
+            <image :src="getUrl('/user-pages/member/cy-icon.png')"></image>
+            <image class="lock" :src="getUrl('/user-pages/member/lock-icon.png')"></image>
             <text>餐饮优惠券5张</text>
           </view>
         </view>
@@ -103,9 +103,7 @@
         :closeOnClickOverlay="true" 
         @close="show = false">
         <view class="panel-box">
-          <view class="title fl-center">
-            <text> 今日积分获得 </text>
-          </view>
+          <card-title text="今日积分获得" url="integral-info.png" :width="31" :height="34" :noPadding="true"></card-title>
           <view>
             <view class="info-row">
               <text>签到</text>
@@ -297,26 +295,6 @@ export default {
   .panel-box {
     padding: 36rpx 24rpx;
     box-sizing: border-box;
-
-    .title {
-      font-size: 34rpx;
-      color: #333333;
-      font-weight: bold;
-      margin-bottom: 62rpx;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      &::before {
-        display: block;
-        content: "";
-        width: 32rpx;
-        height: 34rpx;
-        background: url(@/user-pages/static/image/member/integral-info.png);
-        background-size: cover;
-        margin-right: 15rpx;
-      }
-    }
 
     .info-row {
       display: flex;

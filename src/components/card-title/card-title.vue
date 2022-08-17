@@ -4,7 +4,7 @@
       <image 
         v-if="url"
         :style="{width: width + 'rpx', height: height + 'rpx'}" 
-        :src="'../../static/image/common/' + url" />
+        :src="getUrl('/common/' + url)" />
       <text>{{text}}</text>
     </view>
     <slot></slot>

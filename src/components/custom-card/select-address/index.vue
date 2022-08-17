@@ -4,7 +4,7 @@
     <u-cell-group :border="false">
       <u-cell :border="false">
 		    <view slot="title" class="title">
-          <image slot="icon" src="@/static/image/common/sign-icon.png"></image>
+          <image slot="icon" :src="getUrl('/common/sign-icon.png')"></image>
           <text>{{signInfo.county ? signInfo.county : ''}}</text>
           <text :style="{fontSize: signInfo.street ? '14px' : '17px'}">{{signInfo.street ? signInfo.street : '请填写收货信息'}}</text>
         </view>
@@ -19,7 +19,7 @@
       <view style="width: 591upx;height: 1px;background-color: #F0F0F0;margin: auto;"></view>
       <u-cell :border="false">
 		    <view slot="title" class="title">
-          <image slot="icon" src="@/static/image/common/pick-icon.png"></image>
+          <image slot="icon" :src="getUrl('/common/pick-icon.png')"></image>
           <text>{{pickInfo.county ? pickInfo.county : ''}}</text>
           <text :style="{fontSize: pickInfo.street ? '14px' : '17px'}">{{pickInfo.street ? pickInfo.street : '请填写收货信息'}}</text>
         </view>

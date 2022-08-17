@@ -6,7 +6,7 @@
 
     <view class="content">
       <view class="wallet">
-        <image src="@/user-pages/static/image/package/package-bg.png" class="wallet-bg" />
+        <image :src="getUrl('/user-pages/package/package-bg.png')" class="wallet-bg" />
         <view class="money fl-cl-center-start">
           <text>钱包余额（元）</text>
           <text style="font-size: 60upx; font-weight: bold;">8121.48</text>
@@ -14,11 +14,11 @@
 
         <view class="btn-box fl-center">
           <view class="btn fl-center">
-            <image style="width: 36upx;height: 31upx" src="@/user-pages/static/image/package/package-icon.png" />
+            <image style="width: 36upx;height: 31upx" :src="getUrl('/user-pages/package/package-icon.png')" />
             <text>提现</text>
           </view>
           <view class="btn fl-center">
-            <image style="width: 34upx;height: 34upx" src="@/user-pages/static/image/package/money-icon.png" />
+            <image style="width: 34upx;height: 34upx" :src="getUrl('/user-pages/package/money-icon.png')" />
             <text>充值</text>
           </view>
         </view>
@@ -30,7 +30,7 @@
       </view>
 
       <view class="bill-content">
-        <card-title text="待收款项" url="bill-icon.png" :no-padding="true">
+        <card-title text="待收款项" url="bill-icon.png')" :no-padding="true">
           <view class="type-btn fl-center" @click="show = true">
             <text>{{columns[0][type]}}</text>
             <u-icon color="#999999" name="arrow-down"></u-icon>
@@ -138,7 +138,7 @@ export default {
   padding: 0 24upx 24upx 24upx;
 
   .wallet {
-    // background: url('@/user-pages/static/image/package/package-bg.png') no-repeat;
+    // background: url('@/user-pages/package/package-bg.png') no-repeat;
     // background-size: 100% 100%;
     width: 702upx;
     height: 330upx;

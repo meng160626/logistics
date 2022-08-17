@@ -3,7 +3,7 @@
     <card-title :text="title">
       <image 
         class="icon" 
-        src="@/static/image/common/rubbish-icon.png" 
+        :src="getUrl('/common/rubbish-icon.png')" 
         @click="onDeleteClick" />
     </card-title>
 

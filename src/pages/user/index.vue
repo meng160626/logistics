@@ -5,11 +5,11 @@
 		<view class="contet fl-cl">
 			<!-- 用户信息 -->
 			<view class="info fl-start">
-				<image class="head" src="@/static/image/user/user-head.png" />
+				<image class="head" :src="getUrl('/user/user-head.png')" />
 				<view class="fl-cl-between-start">
 					<view class="fl-center">
 						<text>王富贵</text>
-						<image class="vip" src="@/static/image/user/member-name.png" />
+						<image class="vip" :src="getUrl('/user/member-name.png')" />
 					</view>
 					<view class="car-no">川A20658</view>
 				</view>
@@ -38,11 +38,11 @@
 				<view>
 					<u-cell-group :border="false">
 						<u-cell title="会员" :border="false" :isLink="true" @click="onMemberBtnClick">
-							<image style="width: 33upx;height: 29upx;" src="@/static/image/user/member-icon.png" slot="icon" />
-							<image style="width: 150upx;height: 36upx;" src="@/static/image/user/member-name.png" slot="value" />
+							<image style="width: 33upx;height: 29upx;" :src="getUrl('/user/member-icon.png')" slot="icon" />
+							<image style="width: 150upx;height: 36upx;" :src="getUrl('/user/member-name.png')" slot="value" />
 						</u-cell>
 						<u-cell title="我的收益" :border="false" :isLink="true" @click="onPackageBtnClick">
-							<image style="width: 31upx;height: 31upx;" src="@/static/image/user/line-icon.png" slot="icon" />
+							<image style="width: 31upx;height: 31upx;" :src="getUrl('/user/line-icon.png')" slot="icon" />
 							<view slot="value" class="value-box fl-center">
 								<text>有新收益啦！</text>
 								<view class="temp"></view>
@@ -55,7 +55,7 @@
 			<view class="card">
 				<u-cell-group :border="false">
 					<u-cell title="承运合同" :border="false" :isLink="true">
-						<image style="width: 31upx;height: 31upx;" src="@/static/image/user/bill-icon.png" slot="icon" />
+						<image style="width: 31upx;height: 31upx;" :src="getUrl('/user/bill-icon.png')" slot="icon" />
 					</u-cell>
 				</u-cell-group>
 			</view>
@@ -63,13 +63,13 @@
 			<view class="card">
 				<u-cell-group :border="false">
 					<u-cell title="个人信息" :border="false" :isLink="true">
-						<image style="width: 36upx;height: 31upx;" src="@/static/image/user/card-icon.png" slot="icon" />
+						<image style="width: 36upx;height: 31upx;" :src="getUrl('/user/card-icon.png')" slot="icon" />
 					</u-cell>
 					<u-cell title="车辆管理" :border="false" :isLink="true">
-						<image style="width: 33upx;height: 31upx;" src="@/static/image/user/car-icon.png" slot="icon" />
+						<image style="width: 33upx;height: 31upx;" :src="getUrl('/user/car-icon.png')" slot="icon" />
 					</u-cell>
 					<u-cell title="更多设置" :border="false" :isLink="true">
-						<image style="width: 32upx;height: 29upx;" src="@/static/image/user/setting-icon.png" slot="icon" />
+						<image style="width: 32upx;height: 29upx;" :src="getUrl('/user/setting-icon.png')" slot="icon" />
 					</u-cell>
 				</u-cell-group>
 			</view>
