@@ -16,7 +16,7 @@
       </view>
 
       <view class="growth card">
-        <card-title text="我的成长" url="growth-icon.png')" :width="24" :height="35"></card-title>
+        <card-title text="我的成长" url="growth-icon.png" :width="24" :height="35"></card-title>
 
         <view class="line-box">
           <u-line-progress :height="10" :showText="false" inactiveColor="#fef4d4" :percentage="57">

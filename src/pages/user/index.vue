@@ -140,7 +140,7 @@ export default {
 		.data {
 			margin: 0 24upx;
 			width: calc(100% - 48upx);
-			background: url('@/static/image/user/toolbox-bg.png');
+			background: url('http://localhost:3000/images/user/toolbox-bg.png');
 			background-size: 100% 100%;
 			height: 210upx;
 

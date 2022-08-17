@@ -73,7 +73,7 @@ body {
   .bg {
     width: 750upx;
     height: 440upx;
-    background: url('@/static/image/common/page-bg.png') no-repeat;
+    background: url('http://localhost:3000/images/common/page-bg.png') no-repeat;
     background-size: cover;
     position: fixed;
     top: 0;
