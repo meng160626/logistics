@@ -1,16 +1,16 @@
 {
 	"pages": [
 		{
-			"path": "pages/login/index",
+			"path": "pages/user/index",
 			"style": {
-				"navigationBarTitleText": "登录",
+				"navigationBarTitleText": "个人中心",
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path": "pages/user/index",
+			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "个人中心",
+				"navigationBarTitleText": "登录",
 				"navigationStyle": "custom"
 			}
 		},
